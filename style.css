@@ -205,14 +205,18 @@ button {
 
 .qr-section img {
     display: block;
+    width: 100px;
+    height: 100px;
     margin-top: 15px;
-    border: 5px solid white;
+    border: 3px solid white;
+    object-fit: contain;
+}
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     .qr-section img {
-        filter: invert(50%);
+        filter: none;
     }
 }
 
