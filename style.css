@@ -216,7 +216,7 @@ button {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     .qr-section img {
-        filter: none;
+        filter: invert(50%);
     }
 }
 
