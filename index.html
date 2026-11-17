@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγγραφή Μέλους | Τμήμα Πληροφορικής</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Τμήμα Πληροφορικής</h1>
+    <p>Πανεπιστήμιο – Φόρμα Εγγραφής Νέου Μέλους</p>
+</header>
+
+<main>
+
+    <section class="intro">
+        <h2>Δημιουργία Λογαριασμού</h2>
+        <p>
+            Συμπληρώστε τα παρακάτω στοιχεία για να ολοκληρώσετε
+            την εγγραφή σας στο τμήμα μας.
+        </p>
+        <p class="required-note">* Υποχρεωτικά πεδία</p>
+    </section>
+
+    <form action="#" method="post" autocomplete="on">
+
+        <fieldset>
+            <legend> Προσωπικά Στοιχεία</legend>
+
+            <div class="form-grid">
+
+                <label for="title" title="Επιλέξτε την ιδιότητά σας">
+                    Ιδιότητα:
+                </label>
+                <select id="title" name="title">
+                    <option value="student">Φοιτητής</option>
+                    <option value="visitor">Θεατής</option>
+                </select>
+
+                <label for="firstname" title="Συμπληρώστε το όνομά σας με ελληνικά γράμματα">
+                    Όνομα:
+                </label>
+                <input type="text" id="firstname" name="firstname"
+                       placeholder="π.χ. Γεώργιος"
+                       maxlength="30">
+
+                <label for="lastname" title="Συμπληρώστε το επώνυμό σας">
+                    Επώνυμο:
+                </label>
+                <input type="text" id="lastname" name="lastname"
+                       placeholder="π.χ. Παπαδόπουλος"
+                       maxlength="30">
+
+                <label for="birthdate" title="Επιλέξτε ημερομηνία γέννησης από το 2008 έως το 2010">
+                    Ημερ. Γέννησης:
+                </label>
+                <input type="date" id="birthdate" name="birthdate"
+                       min="2008-01-01" max="2010-12-31">
+
+                <label for="country" title="Επιλέξτε τη χώρα κατοικίας σας">
+                    Χώρα κατοικίας:
+                </label>
+                <select id="country" name="country">
+                    <option value="Greece" selected>Ελλάδα</option>
+                    <option value="Turkey">Τουρκία</option>
+                    <option value="Italy">Ιταλία</option>
+                    <option value="Albania">Αλβανία</option>
+                    <option value="Bulgaria">Βουλγαρία</option>
+                    <option value="Cyprus">Κύπρος</option>
+                    <option value="Germany">Γερμανία</option>
+                    <option value="France">Γαλλία</option>
+                </select>
+
+                <label for="marital" title="Επιλέξτε την οικογενειακή σας κατάσταση">
+                    Οικογενειακή κατάσταση:
+                </label>
+                <select id="marital" name="marital">
+                    <option value="single">Άγαμος</option>
+                    <option value="married">Έγγαμος</option>
+                </select>
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>📞 Στοιχεία Επικοινωνίας</legend>
+
+            <div class="form-grid">
+
+                <label for="address" title="Συμπληρώστε την οδό και τον αριθμό της κατοικίας σας">
+                    Διεύθυνση: *
+                </label>
+                <input type="text" id="address" name="address"
+                       placeholder="π.χ. Οδός Αθηνάς 15"
+                       required maxlength="100">
+
+                <label for="city" title="Πληκτρολογήστε την πόλη κατοικίας σας">
+                    Πόλη:
+                </label>
+                <input type="text" id="city" name="city"
+                       placeholder="π.χ. Αθήνα"
+                       size="10" maxlength="15">
+
+                <label for="region" title="Συμπληρώστε την περιοχή ή περιφέρειά σας">
+                    Περιοχή / Περιφέρεια:
+                </label>
+                <input type="text" id="region" name="region"
+                       placeholder="π.χ. Αττική"
+                       maxlength="30">
+
+                <label for="postcode" title="Συμπληρώστε τον ταχυδρομικό κώδικα">
+                    Ταχυδρομικός Κώδικας:
+                </label>
+                <input type="text" id="postcode" name="postcode"
+                       placeholder="π.χ. 10558"
+                       maxlength="5" pattern="[0-9]{5}">
+
+                <label for="phone" title="Συμπληρώστε το τηλέφωνό σας">
+                    Τηλέφωνο:
+                </label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="π.χ. 6912345678"
+                       maxlength="15">
+
+                <label for="email" title="Συμπληρώστε ένα έγκυρο email">
+                    Ηλεκτρονικό ταχυδρομείο:
+                </label>
+                <input type="email" id="email" name="email"
+                       placeholder="example@gmail.com">
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend> Δημιουργία Κωδικού Πρόσβασης</legend>
+
+            <div class="form-grid">
+
+                <label for="username" title="Δημιουργήστε ένα όνομα χρήστη">
+                    Όνομα χρήστη: *
+                </label>
+                <input type="text" id="username" name="username"
+                       placeholder="π.χ. student123"
+                       required minlength="4" maxlength="20">
+
+                <label for="password" title="Δημιουργήστε έναν ασφαλή κωδικό πρόσβασης">
+                    Κωδικός πρόσβασης: *
+                </label>
+                <input type="password" id="password" name="password"
+                       placeholder="Τουλάχιστον 8 χαρακτήρες"
+                       required minlength="8">
+
+            </div>
+        </fieldset>
+
+        <div class="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" title="Απαιτείται αποδοχή για την ολοκλήρωση της εγγραφής">
+                Έχω διαβάσει και αποδέχομαι τους
+                <a href="#terms-info">Όρους και Προϋποθέσεις</a>.
+            </label>
+        </div>
+
+        <div id="terms-info" class="terms-info">
+            <strong>Όροι και Προϋποθέσεις:</strong>
+            Τα στοιχεία που συμπληρώνετε χρησιμοποιούνται για τη
+            διαδικασία εγγραφής και επικοινωνίας με το τμήμα.
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="submit-btn">
+                ✓ Αποστολή Εγγραφής
+            </button>
+
+            <button type="reset" class="reset-btn">
+                ✕ Ακύρωση
+            </button>
+        </div>
+
+    </form>
+
+    <aside class="qr-section">
+        <h3>Σαρώστε τον κωδικό QR</h3>
+        <p>Επισκεφθείτε τη σελίδα εγγραφής από το κινητό σας.</p>
+
+        <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fexample.edu%2Fregistration"
+            alt="QR Code σελίδας εγγραφής">
+    </aside>
+
+</main>
+
+<footer>
+    <p>© 2026 Τμήμα Πληροφορικής | Πανεπιστήμιο Πειραιά</p>
+</footer>
+
+</body>
+</html>

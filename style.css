@@ -1,0 +1,259 @@
+
+/* Γενικές ρυθμίσεις */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* Επικεφαλίδα */
+header {
+    background: linear-gradient(120deg, #12345a, #2875a8);
+    color: white;
+    padding: 30px;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+/* Κεντρικό περιεχόμενο */
+main {
+    width: 90%;
+    max-width: 950px;
+    margin: 30px 0 30px 5%;
+}
+
+.intro {
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    color: #174d78;
+    margin-bottom: 10px;
+}
+
+.required-note {
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Πλαίσια */
+fieldset {
+    background-color: white;
+    border: 1px solid #ccd6e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 18px;
+    color: #174d78;
+    padding: 0 10px;
+}
+
+/* Δύο στήλες με CSS Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 15px 20px;
+    align-items: center;
+}
+
+/* Περιγραφές πεδίων */
+label {
+    font-weight: bold;
+    cursor: pointer;
+    color: #34495e;
+    transition: color 0.2s;
+}
+
+label:hover {
+    color: #16834b;
+}
+
+/* Πεδία εισαγωγής */
+input:not([type="checkbox"]),
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #c5cdd5;
+    border-radius: 6px;
+    background-color: #f4f6f8;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* Όταν ο χρήστης επιλέγει ένα πεδίο */
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #18a558;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(24,165,88,0.2);
+}
+
+/* Όταν ο χρήστης απομακρύνεται από το πεδίο */
+input:not(:focus),
+select:not(:focus) {
+    background-color: #e9edf1;
+}
+
+/* Placeholder */
+input::placeholder {
+    color: #8995a1;
+    font-style: italic;
+}
+
+/* Checkbox */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.terms input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #16834b;
+    cursor: pointer;
+}
+
+.terms label {
+    font-size: 14px;
+}
+
+.terms a {
+    color: #1769aa;
+    font-weight: bold;
+}
+
+.terms-info {
+    background-color: #e4edf5;
+    border-left: 4px solid #2875a8;
+    padding: 12px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Κουμπιά */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    background-color: #16834b;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #0e6035;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #922b21;
+    transform: translateY(-2px);
+}
+
+/* QR Code */
+.qr-section {
+    background-color: white;
+    border: 1px solid #ccd6e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: left;
+    width: fit-content;
+}
+
+.qr-section h3 {
+    color: #174d78;
+    margin-bottom: 8px;
+}
+
+.qr-section img {
+    display: block;
+    margin-top: 15px;
+    border: 5px solid white;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .qr-section img {
+        filter: invert(50%);
+    }
+}
+
+/* Υποσέλιδο */
+footer {
+    background-color: #12345a;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Ειδική μορφοποίηση για οθόνες κάτω από 500px */
+@media screen and (max-width: 499px) {
+
+    body {
+        background-color: #dcebdc;
+    }
+
+    main {
+        width: 94%;
+        margin-left: 3%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
